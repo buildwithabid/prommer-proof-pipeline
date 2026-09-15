@@ -1,0 +1,281 @@
+<title>Proof Pipeline</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#EEF1F2; --surface:#FFFFFF; --surface-2:#F7F9F9;
+  --ink:#131A1D; --ink-2:#3D4A4F; --muted:#68767C; --line:#D5DDDF;
+  --accent:#0E6F6A; --accent-soft:#D8EBE9;
+  --pass:#1B6B3A; --pass-soft:#DCEDE2; --fail:#A32218; --fail-soft:#F6DFDC;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --cond:"IBM Plex Sans Condensed","IBM Plex Sans",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0C1214; --surface:#141C1F; --surface-2:#182226;
+  --ink:#E4ECEE; --ink-2:#B3C1C5; --muted:#7E8F95; --line:#26343A;
+  --accent:#41BDB2; --accent-soft:#16332F;
+  --pass:#5CC98A; --pass-soft:#12301F; --fail:#EE8A7E; --fail-soft:#361814;
+}}
+:root[data-theme="dark"]{
+  --ground:#0C1214; --surface:#141C1F; --surface-2:#182226;
+  --ink:#E4ECEE; --ink-2:#B3C1C5; --muted:#7E8F95; --line:#26343A;
+  --accent:#41BDB2; --accent-soft:#16332F;
+  --pass:#5CC98A; --pass-soft:#12301F; --fail:#EE8A7E; --fail-soft:#361814;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);
+  font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:900px;margin:0 auto;padding-block:40px 72px;padding-left:20px;padding-right:20px;
+  display:flex;flex-direction:column;gap:38px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+code,.mono{font-family:var(--mono)}
+
+/* header */
+header{display:flex;flex-direction:column;gap:14px;border-bottom:2px solid var(--ink);padding-bottom:26px}
+h1{font-family:var(--cond);font-size:clamp(30px,6vw,46px);font-weight:700;line-height:1.04;letter-spacing:-.015em}
+h1 .sub{display:block;color:var(--accent)}
+.dek{max-width:62ch;color:var(--ink-2);font-size:16.5px}
+.runbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-family:var(--mono);font-size:11.5px}
+.rchip{border:1px solid var(--line);background:var(--surface);padding:3px 9px;color:var(--muted)}
+.rchip b{color:var(--ink-2);font-weight:500}
+.verdict{border:1px solid var(--pass);background:var(--pass-soft);color:var(--pass);
+  padding:3px 9px;font-weight:600;letter-spacing:.06em}
+
+/* thesis */
+.thesis{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);
+  padding:22px 24px;display:flex;flex-direction:column;gap:9px}
+.thesis p{margin:0;font-size:17px;line-height:1.5;max-width:64ch}
+.thesis .src{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+
+section{display:flex;flex-direction:column;gap:16px}
+h2{font-family:var(--cond);font-size:23px;font-weight:700;letter-spacing:-.005em}
+.lede{color:var(--ink-2);max-width:66ch;margin:0}
+
+/* pipeline spine */
+.spine{display:flex;flex-direction:column;border:1px solid var(--line);background:var(--surface)}
+.stage{display:grid;grid-template-columns:34px 1fr auto;gap:0 16px;align-items:start;
+  padding:14px 18px;border-bottom:1px solid var(--line)}
+.stage:last-child{border-bottom:0}
+.stage .n{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:2px;font-variant-numeric:tabular-nums}
+.stage .body{display:flex;flex-direction:column;gap:3px;min-width:0}
+.stage .nm{font-weight:600;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.kind{font-family:var(--mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  padding:1px 6px;border:1px solid var(--line);color:var(--muted)}
+.kind.ag{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.kind.gate{color:var(--ink);border-color:var(--ink);font-weight:600}
+.stage .note{color:var(--ink-2);font-size:13.5px}
+.stage .t{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;padding-top:2px}
+
+/* gate */
+.gaterow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.gcard{border:1px solid var(--line);background:var(--surface);padding:18px;display:flex;flex-direction:column;gap:12px}
+.gcard.ok{border-top:3px solid var(--pass)} .gcard.no{border-top:3px solid var(--fail)}
+.gh{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.gh .lab{font-family:var(--cond);font-weight:700;font-size:16px}
+.badge{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.07em;padding:2px 8px}
+.badge.ok{background:var(--pass-soft);color:var(--pass);border:1px solid var(--pass)}
+.badge.no{background:var(--fail-soft);color:var(--fail);border:1px solid var(--fail)}
+.gcard p{margin:0;font-size:13.5px;color:var(--ink-2)}
+.toks{display:flex;flex-wrap:wrap;gap:5px}
+.tok{font-family:var(--mono);font-size:11px;padding:2px 7px;border:1px solid var(--line);
+  background:var(--surface-2);color:var(--ink-2)}
+.tok.bad{border-color:var(--fail);background:var(--fail-soft);color:var(--fail);font-weight:500;text-decoration:line-through}
+
+/* chart */
+.chartbox{border:1px solid var(--line);background:var(--surface);padding:18px 18px 12px}
+.chartbox figcaption{font-size:13px;color:var(--ink-2);margin-top:10px;max-width:70ch}
+.legend{display:flex;gap:16px;font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:10px}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:5px;vertical-align:-1px}
+.scroll{overflow-x:auto}
+
+/* outputs */
+pre{margin:0;font-family:var(--mono);font-size:12.5px;line-height:1.62;background:var(--surface-2);
+  border:1px solid var(--line);padding:16px;overflow-x:auto;color:var(--ink-2);white-space:pre}
+.outhead{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+.outhead .fn{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--ink)}
+.outhead .meta{font-size:12px;color:var(--muted)}
+.qs{display:flex;flex-direction:column;gap:9px;border:1px solid var(--line);background:var(--surface);padding:18px}
+.qs .q{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:14px;color:var(--ink-2)}
+.qs .q span{color:var(--accent);font-family:var(--mono);font-size:12px;padding-top:2px}
+
+/* limits */
+.limits{border:1px dashed var(--line);background:transparent;padding:20px 22px;display:flex;flex-direction:column;gap:10px}
+.limits ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:7px;color:var(--ink-2);font-size:14px;max-width:70ch}
+footer{border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:12.5px;font-family:var(--mono)}
+a{color:var(--accent)}
+@media (max-width:640px){.gaterow{grid-template-columns:1fr}.stage{grid-template-columns:26px 1fr;gap:0 12px}.stage .t{grid-column:2;padding-top:4px}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Multi-step agentic workflow · built for prommer.net</div>
+  <h1>Proof Pipeline<span class="sub">what the answer engines can't cite</span></h1>
+  <p class="dek">prommer.net renders its single strongest AI-native credential — a live shipping ticker — client-side, where no crawler or LLM can read it. This pipeline crawls the site, extracts a grounded proof ledger, audits it against the hand-written <code>llms.txt</code>, regenerates the missing machine-readable layer, and refuses to ship anything it can't trace back to the source.</p>
+  <div class="runbar">
+    <span class="verdict">GATE PASS</span>
+    <span class="rchip">run <b>2026-09-15</b></span>
+    <span class="rchip">corpus <b>23,798 ch</b></span>
+    <span class="rchip">sha <b>e6d0c0637420</b></span>
+    <span class="rchip">agent steps <b>3</b></span>
+    <span class="rchip">checks <b>25</b></span>
+    <span class="rchip">ungrounded <b>0</b></span>
+  </div>
+</header>
+
+<div class="thesis">
+  <div class="eyebrow">Stage 3 finding · highest impact</div>
+  <p>19,977 commits in six months, 69% of them paired with a coding agent, across 124 repos — the exact claim that substantiates “AI-native, agentic-led” — is on the page but absent from <code>llms.txt</code>. A booker or buyer researching through an LLM cannot cite it.</p>
+  <div class="src">emitted by s3_audit · grounded against live crawl</div>
+</div>
+
+<section>
+  <h2>The pipeline</h2>
+  <p class="lede">Six stages, three of them real model calls, two deterministic. The agent steps reason; the deterministic steps are the ones allowed to say no.</p>
+  <div class="spine">
+    <div class="stage"><div class="n">01</div><div class="body">
+      <div class="nm">CRAWL <span class="kind">deterministic</span></div>
+      <div class="note">Fetched prommer.net, wetheflywheel.com, llms.txt and four competitor sites. Parsed 26 weeks of ticker data. Froze a 23,798-character grounding corpus, hashed.</div>
+    </div><div class="t">0.0s</div></div>
+    <div class="stage"><div class="n">02</div><div class="body">
+      <div class="nm">EXTRACT <span class="kind ag">agent</span></div>
+      <div class="note">Read the raw page text, emitted a 16-entry proof ledger — each claim carrying the exact source substring it came from. Inference forbidden.</div>
+    </div><div class="t">21.3s</div></div>
+    <div class="stage"><div class="n">03</div><div class="body">
+      <div class="nm">AUDIT <span class="kind ag">agent</span></div>
+      <div class="note">Diffed the ledger against the live <code>llms.txt</code>. Found 6 gaps where proof exists on-site but is absent or stale in the machine layer — 3 rated high.</div>
+    </div><div class="t">35.7s</div></div>
+    <div class="stage"><div class="n">04</div><div class="body">
+      <div class="nm">GENERATE <span class="kind ag">agent</span></div>
+      <div class="note">Wrote the fix: an <code>llms.txt</code> “Proof of practice” section, a schema.org Person block, and a press-booker brief — restricted to ledger facts only.</div>
+    </div><div class="t">80.3s</div></div>
+    <div class="stage"><div class="n">05</div><div class="body">
+      <div class="nm">VALIDATE <span class="kind gate">gate</span></div>
+      <div class="note">Every number and proper noun in the generated output must appear verbatim in the frozen corpus. 25 checks, 0 ungrounded. A failure feeds the offending tokens back to stage 04 and regenerates, up to 3 attempts.</div>
+    </div><div class="t">0.0s</div></div>
+    <div class="stage"><div class="n">06</div><div class="body">
+      <div class="nm">PUBLISH <span class="kind">deterministic</span></div>
+      <div class="note">Wrote the run record — stage timings, ledger, findings, every individual check — to <code>run.json</code>. This page is that record.</div>
+    </div><div class="t">—</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>The gate has to be able to fail</h2>
+  <p class="lede">A validator that passes everything is decoration. So I ran a negative control: took the passing artifact, injected the three hallucinations an LLM most plausibly produces here — an inflated commit count, an invented outlet, and one true claim as a decoy — and re-ran the same validator, unchanged.</p>
+  <div class="gaterow">
+    <div class="gcard ok">
+      <div class="gh"><span class="lab">Real run</span><span class="badge ok">PASS · 0/25</span></div>
+      <p>Every token traced to the crawl. A sample of what was checked:</p>
+      <div class="toks">
+        <span class="tok">19,977</span><span class="tok">124</span><span class="tok">69</span><span class="tok">46</span>
+        <span class="tok">1000</span><span class="tok">56</span><span class="tok">Business Insider</span>
+        <span class="tok">Fast Company</span><span class="tok">HotTopics Global CIO</span><span class="tok">USA Today</span>
+        <span class="tok">We The Flywheel</span><span class="tok">Metropolis Marathon</span>
+      </div>
+    </div>
+    <div class="gcard no">
+      <div class="gh"><span class="lab">Negative control</span><span class="badge no">FAIL · 2/28</span></div>
+      <p>Caught and rejected, build stopped:</p>
+      <div class="toks">
+        <span class="tok bad">24,500</span><span class="tok bad">Forbes Technology Council</span>
+      </div>
+      <p>The decoy — “1000+ engineers led, $2B+ impact” — correctly passed, because it is genuinely on the page. The gate rejects fabrication, not confidence.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>The invisible asset</h2>
+  <p class="lede">26 weeks of shipping data, parsed from the page at stage 01. This is the series that proves the positioning — and the series an LLM currently cannot see.</p>
+  <figure class="chartbox" style="margin:0">
+    <div class="legend">
+      <span><i style="background:var(--line)"></i>total commits</span>
+      <span><i style="background:var(--accent)"></i>AI-paired</span>
+    </div>
+    <div class="scroll"><svg id="chart" viewBox="0 0 860 210" width="100%" style="min-width:560px;display:block" role="img" aria-label="Weekly commits and AI-paired commits, March to September 2026"></svg></div>
+    <figcaption>Peak week: 1,436 commits, 1,202 AI-paired (Jun 14). Aggregate: 19,977 commits, 69% agent-paired. Source: prommer.net homepage ticker, parsed 2026-09-15.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>What stage 04 shipped</h2>
+  <div>
+    <div class="outhead"><span class="fn">llms.txt</span><span class="meta">append — new section, every line gate-verified</span></div>
+    <pre>## Proof of practice
+
+- 19,977 commits shipped in the past 6 months
+- 69% of commits paired with a coding agent
+- 124 repositories built and run
+- 20+ years of digital experience
+- 1000+ engineers led
+- $2B+ work-scope impact
+- 46% Fortune 50 client coverage
+- Marathon PB 3:20 at the Metropolis Marathon 2025
+- VO2Max Lab Tested 56 (Dec 2025)
+- 2025 running mileage &gt;2.5k km</pre>
+  </div>
+  <div>
+    <div class="outhead"><span class="fn">Person.jsonld</span><span class="meta">schema.org — awards and press as structured, citable nodes</span></div>
+    <pre>{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Thomas Prommer",
+  "award": [
+    "HotTopics Global CIO 2026",
+    "Fast Company 2026 World Changing Idea for Flywheel Motion"
+  ],
+  "founder": [
+    "ctaio.dev", "We The Flywheel",
+    "Flywheel Motion", "aistrategy.guide"
+  ]
+}</pre>
+  </div>
+  <div>
+    <div class="outhead"><span class="fn">booker-brief</span><span class="meta">the three questions the pipeline says a host should ask</span></div>
+    <div class="qs">
+      <div class="q"><span>01</span><div>What does it actually look like day-to-day to have 69% of your commits paired with a coding agent across 124 repositories?</div></div>
+      <div class="q"><span>02</span><div>What did three years of global field research turn up that led Fast Company to name Flywheel Motion a 2026 World Changing Idea?</div></div>
+      <div class="q"><span>03</span><div>What's the story behind your Business Insider quote about contributors not wanting work footnoted as “cowritten by Claude”?</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Where this is still weak</h2>
+  <div class="limits">
+    <ul>
+      <li>The entity check only catches multi-word proper nouns. In the negative control it caught “Forbes Technology Council” but <em>missed</em> a bare “TechCrunch” — single-token outlets slip through. Next fix: a known-entity list plus a single-token capitalised sweep.</li>
+      <li>Grounding is verbatim string matching, so it proves a number came from the page — not that the page was right. It's a fabrication gate, not a truth gate.</li>
+      <li>The crawl reads server-rendered HTML. The ticker only parsed because its values ship in the markup; a fully client-rendered widget would need a headless browser at stage 01.</li>
+      <li>Stage 03's severity ranking is the model's judgement and is not gated. I'd want a human sign-off on ordering before this ran unattended.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>Built by Abid Ali · pipeline.py, 3 agent steps + deterministic grounding gate · run 2026-09-15 · corpus sha e6d0c0637420</footer>
+</div>
+
+<script>
+const D=[["Mar 22",292,207],["Mar 29",348,215],["Apr 5",483,375],["Apr 12",651,451],["Apr 19",368,289],["Apr 26",583,270],["May 3",537,377],["May 10",657,490],["May 17",554,352],["May 24",640,492],["May 31",895,814],["Jun 7",1382,1136],["Jun 14",1436,1202],["Jun 21",1343,1079],["Jun 28",995,804],["Jul 5",1105,758],["Jul 12",769,629],["Jul 19",414,295],["Jul 26",816,554],["Aug 2",506,417],["Aug 9",852,363],["Aug 16",1426,783],["Aug 23",937,362],["Aug 30",981,393],["Sep 6",786,543],["Sep 13",221,173]];
+(function(){
+  const svg=document.getElementById('chart');
+  const W=860,H=210,L=44,R=12,T=14,B=30, iw=W-L-R, ih=H-T-B;
+  const max=1500, n=D.length, bw=iw/n, gap=3;
+  const cs=getComputedStyle(document.documentElement);
+  const line=cs.getPropertyValue('--line').trim(), acc=cs.getPropertyValue('--accent').trim(), mut=cs.getPropertyValue('--muted').trim();
+  const y=v=>T+ih-(v/max)*ih;
+  let s='';
+  [0,500,1000,1500].forEach(t=>{
+    s+=`<line x1="${L}" y1="${y(t)}" x2="${W-R}" y2="${y(t)}" stroke="${line}" stroke-width="1"/>`;
+    s+=`<text x="${L-8}" y="${y(t)+4}" text-anchor="end" fill="${mut}" font-family="IBM Plex Mono, monospace" font-size="10">${t.toLocaleString()}</text>`;
+  });
+  D.forEach((d,i)=>{
+    const x=L+i*bw+gap/2, w=bw-gap;
+    s+=`<rect x="${x.toFixed(1)}" y="${y(d[1]).toFixed(1)}" width="${w.toFixed(1)}" height="${(T+ih-y(d[1])).toFixed(1)}" fill="${line}"/>`;
+    s+=`<rect x="${x.toFixed(1)}" y="${y(d[2]).toFixed(1)}" width="${w.toFixed(1)}" height="${(T+ih-y(d[2])).toFixed(1)}" fill="${acc}"/>`;
+    if(i%5===0||i===n-1) s+=`<text x="${(x+w/2).toFixed(1)}" y="${H-10}" text-anchor="middle" fill="${mut}" font-family="IBM Plex Mono, monospace" font-size="10">${d[0]}</text>`;
+  });
+  svg.innerHTML=s;
+})();
+</script>

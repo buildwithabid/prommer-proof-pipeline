@@ -1,0 +1,196 @@
+{
+  "proof_ledger": [
+    {
+      "claim": "HotTopics named Thomas Prommer Global CIO 2026.",
+      "category": "press",
+      "evidence": "HotTopics names Thomas Prommer Global CIO 2026"
+    },
+    {
+      "claim": "Fast Company named Flywheel Motion a 2026 World Changing Idea.",
+      "category": "press",
+      "evidence": "Fast Company names Flywheel Motion a 2026 World Changing Idea"
+    },
+    {
+      "claim": "Thomas Prommer was quoted in Business Insider saying contributors didn't want their work footnoted as cowritten by Claude.",
+      "category": "press",
+      "evidence": "\"They didn\u2019t want their best contributions footnoted as \u2018cowritten by Claude\u2019\""
+    },
+    {
+      "claim": "He has 20+ years of digital experience.",
+      "category": "scale",
+      "evidence": "Digital Experience 20+ years"
+    },
+    {
+      "claim": "He has led 1000+ engineers.",
+      "category": "scale",
+      "evidence": "Teams Led 1000+ engineers"
+    },
+    {
+      "claim": "His work scope has $2B+ impact.",
+      "category": "scale",
+      "evidence": "Work Scope $2B+ impact"
+    },
+    {
+      "claim": "He has Fortune 50 clients with 46% coverage.",
+      "category": "scale",
+      "evidence": "Fortune 50 Clients 46% coverage"
+    },
+    {
+      "claim": "He is the Founder at ctaio.dev, a community for next-gen technology leadership.",
+      "category": "positioning",
+      "evidence": "Founder at ctaio.dev Community for next-gen technology leadership"
+    },
+    {
+      "claim": "He shipped 19,977 commits over 6 months.",
+      "category": "scale",
+      "evidence": "19,977 commits"
+    },
+    {
+      "claim": "69% of his commits are paired with a coding agent.",
+      "category": "practice",
+      "evidence": "69% of commits paired with a coding agent"
+    },
+    {
+      "claim": "He builds and runs 124 repositories.",
+      "category": "scale",
+      "evidence": "out of 124 I build and run"
+    },
+    {
+      "claim": "His VO2Max Lab Tested result is 56 as of Dec 2025.",
+      "category": "scale",
+      "evidence": "VO2Max Lab Tested 56 Dec 2025"
+    },
+    {
+      "claim": "His 2025 running mileage was more than 2.5k km.",
+      "category": "scale",
+      "evidence": "2025 Mileage >2.5k km running"
+    },
+    {
+      "claim": "His Marathon PB is 3:20 at the Metropolis Marathon 2025.",
+      "category": "scale",
+      "evidence": "Marathon PB 3:20 Metropolis Marathon 2025"
+    },
+    {
+      "claim": "USA Today reported he was named Global CIO 2026 by HotTopics.",
+      "category": "press",
+      "evidence": "USA Today \u00b7 Jun 2026 Named Global CIO 2026 by HotTopics"
+    },
+    {
+      "claim": "Fast Company's World Changing Idea recognition for Flywheel Motion was built on three years of global field research.",
+      "category": "press",
+      "evidence": "Fast Company Names Flywheel Motion a 2026 World Changing Idea \u2014 Built on Three Years of Global Field Research"
+    }
+  ],
+  "properties": [
+    {
+      "name": "We The Flywheel",
+      "url": "",
+      "role": "AI-native, agentic-led digital studio"
+    },
+    {
+      "name": "Flywheel Motion",
+      "url": "",
+      "role": "Mission-led brand building"
+    },
+    {
+      "name": "ctaio.dev",
+      "url": "",
+      "role": "Community for the next-gen tech executive"
+    },
+    {
+      "name": "aistrategy.guide",
+      "url": "",
+      "role": "Enterprise AI strategy"
+    }
+  ],
+  "press": [
+    {
+      "outlet": "Business Insider",
+      "claim": "They didn\u2019t want their best contributions footnoted as \u2018cowritten by Claude\u2019"
+    },
+    {
+      "outlet": "USA Today",
+      "claim": "Named Global CIO 2026 by HotTopics"
+    },
+    {
+      "outlet": "sportschau.de",
+      "claim": "\"Datenlage zu d\u00fcnn\": Abnehmspritze im Sport \u2013 ist das schon Doping?"
+    },
+    {
+      "outlet": "vcmagazine.com",
+      "claim": "Beyond Passwords: How AI-Era Identity Platforms Are Redefining Trust Online"
+    },
+    {
+      "outlet": "medium.com",
+      "claim": "Your Boss Told You to Use AI. Now the AI Is Getting the Credit. You're Getting the Blame."
+    },
+    {
+      "outlet": "businessinsider.com",
+      "claim": "Bosses credit AI instead of employees, delaying promotions, raises"
+    },
+    {
+      "outlet": "finchannel.com",
+      "claim": "AI and Crypto Convergence: What Happens After the Speculation Fades"
+    },
+    {
+      "outlet": "cio.inc",
+      "claim": "Why Enterprises Need a New Playbook for AI Value"
+    },
+    {
+      "outlet": "usatoday.com",
+      "claim": "Thomas Prommer Named Global CIO 2026 by HotTopics"
+    },
+    {
+      "outlet": "okoone.com",
+      "claim": "Why most companies still think too small about AI"
+    },
+    {
+      "outlet": "prommer.net",
+      "claim": "HotTopics Names Thomas Prommer Global CIO 2026"
+    },
+    {
+      "outlet": "apnews.com",
+      "claim": "Fast Company Names Flywheel Motion a 2026 World Changing Idea \u2014 Built on Three Years of Global Field Research"
+    },
+    {
+      "outlet": "prweb.com",
+      "claim": "Edges of Earth Named Honoree in Fast Company's 2026 World Changing Ideas Awards"
+    },
+    {
+      "outlet": "cio.com",
+      "claim": "State of the CIO, 2026: CIOs set the course for AI ROI"
+    },
+    {
+      "outlet": "ctocraft.com",
+      "claim": "AI is the New OS"
+    },
+    {
+      "outlet": "hyground.ai",
+      "claim": "Partner Ecosystem Update May 2026 \u2014 CTO purchasing guide for AI-SRE tools"
+    },
+    {
+      "outlet": "noah-news.com",
+      "claim": "Most companies remain at early AI maturity stages"
+    },
+    {
+      "outlet": "spiceworks.com",
+      "claim": "How AI is Reshaping Data Center Careers"
+    },
+    {
+      "outlet": "cio.com",
+      "claim": "Las compa\u00f1\u00edas siguen buscando mejoras incrementales, no transformadoras, con la IA"
+    },
+    {
+      "outlet": "cio.com",
+      "claim": "Enterprises still chase incremental, not transformational, AI gains"
+    },
+    {
+      "outlet": "collegerecruiter.com",
+      "claim": "From prompt engineering to soft skills: The new 'skills-first' baseline for EU entry-level roles"
+    },
+    {
+      "outlet": "moneyinfocus.news",
+      "claim": "OpenAI, Anthropic Dispute Signals Shift in AI Investment Priorities"
+    }
+  ]
+}

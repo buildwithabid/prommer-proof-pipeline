@@ -1,0 +1,134 @@
+{
+  "total_checks": 25,
+  "failed": 0,
+  "passed": 25,
+  "gate": "PASS",
+  "ungrounded": [],
+  "checks": [
+    {
+      "type": "number",
+      "token": "1000",
+      "grounded": true
+    },
+    {
+      "type": "number",
+      "token": "124",
+      "grounded": true
+    },
+    {
+      "type": "number",
+      "token": "19,977",
+      "grounded": true
+    },
+    {
+      "type": "number",
+      "token": "20",
+      "grounded": true
+    },
+    {
+      "type": "number",
+      "token": "2025",
+      "grounded": true
+    },
+    {
+      "type": "number",
+      "token": "2026",
+      "grounded": true
+    },
+    {
+      "type": "number",
+      "token": "46",
+      "grounded": true
+    },
+    {
+      "type": "number",
+      "token": "50",
+      "grounded": true
+    },
+    {
+      "type": "number",
+      "token": "56",
+      "grounded": true
+    },
+    {
+      "type": "number",
+      "token": "69",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Business Insider",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Digital Experience",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Fast Company",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Fast Company Names Flywheel Motion",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Flywheel Motion",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "HotTopics Global CIO",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Marathon PB",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Metropolis Marathon",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Thomas Prommer",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Thomas Prommer Named Global CIO",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "Three Years",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "USA Today",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "VO2Max Lab Tested",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "We The Flywheel",
+      "grounded": true
+    },
+    {
+      "type": "entity",
+      "token": "World Changing Idea",
+      "grounded": true
+    }
+  ]
+}

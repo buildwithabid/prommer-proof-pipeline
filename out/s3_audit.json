@@ -1,0 +1,41 @@
+{
+  "findings": [
+    {
+      "gap": "llms.txt links to a bare /en/press/ page but contains zero actual press claims \u2014 no mention of HotTopics naming him Global CIO 2026, Fast Company naming Flywheel Motion a World Changing Idea, the Business Insider quote, or USA Today's coverage. All of this lives only in on-page (likely client-rendered) proof blocks, not in the crawlable index.",
+      "why_it_costs_inbound": "Press/podcast bookers are named as a primary buyer and they query LLMs with prompts like 'who has recently been named a CIO of the year' or 'guests quoted in Business Insider on AI and authorship' \u2014 with no citable text, an answer engine cites a competitor with a thinner but crawlable accolade list instead.",
+      "severity": "high",
+      "fix": "Add a dated 'Recognition & Press' section to llms.txt listing each accolade/outlet/claim verbatim (HotTopics Global CIO 2026, Fast Company World Changing Idea 2026, Business Insider quote, USA Today feature) with direct links."
+    },
+    {
+      "gap": "The specific AI-native practice metrics that substantiate the 'agentic-led digital studio' claim \u2014 19,977 commits in 6 months, 69% of commits paired with a coding agent, 124 repositories run \u2014 appear nowhere in llms.txt.",
+      "why_it_costs_inbound": "This is the single most differentiating proof-of-practice claim on the site and the exact thing a founder vetting an AI-native counterparty would ask an LLM to verify ('does this person actually build with agents or just talk about it?'). Without it in crawlable text, the positioning claim in the llms.txt overview line is unsubstantiated to any model reading it.",
+      "severity": "high",
+      "fix": "Add a 'Proof of practice' section with the commit volume, agent-pairing percentage, and repo count, refreshed on a stated cadence so the numbers don't go stale."
+    },
+    {
+      "gap": "Scale/authority credentials \u2014 20+ years digital experience, 1000+ engineers led, $2B+ work-scope impact, 46% Fortune 50 client coverage \u2014 are on-site but absent from llms.txt.",
+      "why_it_costs_inbound": "These are the baseline qualifying stats a founder/operator uses to decide whether to even consider an advisory engagement; without them an LLM answering 'has this consultant worked at enterprise scale' has nothing to cite and will default to generic bio language or a competitor's stated numbers.",
+      "severity": "high",
+      "fix": "Add these four figures to the About or a new 'Track record' section in llms.txt, matched to the same wording used on-site for consistency."
+    },
+    {
+      "gap": "aistrategy.guide ('Enterprise AI strategy') is listed in the site's own properties data but missing entirely from the 'Related properties' section of llms.txt, which only lists CTAIO, We The Flywheel, and Flywheel Motion.",
+      "why_it_costs_inbound": "A fourth property focused specifically on enterprise AI strategy is exactly the surface an LLM would want to cite when answering 'does this person have resources on enterprise AI strategy' \u2014 right now that entire property is invisible to answer engines crawling from prommer.net.",
+      "severity": "medium",
+      "fix": "Add aistrategy.guide to the Related properties list with its role description, matching the format of the other three entries."
+    },
+    {
+      "gap": "llms.txt describes ctaio.dev as 'Weekly newsletter on the CTO + CIO + AI convergence' while the live site's own proof ledger describes it as 'Founder at ctaio.dev \u2014 Community for next-gen technology leadership.' The positioning has shifted from newsletter to community/founder framing but llms.txt wasn't updated.",
+      "why_it_costs_inbound": "Inconsistent self-description across crawlable surfaces makes an LLM either pick the stale framing or hedge with uncertain language, weakening the specific 'Founder' credential that supports authority-based buyer decisions.",
+      "severity": "medium",
+      "fix": "Update the ctaio.dev entry in Related properties to match current site language, including the 'Founder' role."
+    },
+    {
+      "gap": "The Training pillar description in llms.txt is purely topical (HYROX, marathon, Ironman) with no concrete performance proof points, while the site carries specific, verifiable numbers (Marathon PB 3:20 at Metropolis Marathon 2025, VO2Max 56 lab-tested Dec 2025, >2.5k km 2025 mileage) that establish first-hand practitioner credibility.",
+      "why_it_costs_inbound": "The llms.txt overview explicitly claims content is 'written first-hand rather than aggregated' for training too \u2014 without citable performance numbers, an LLM can't distinguish this from any other training blogger, undercutting the credibility claim for the pillar that has ~489 pages of content riding on it.",
+      "severity": "low",
+      "fix": "Add a short 'Athlete credentials' line to the Training section with the marathon PB, VO2Max, and mileage figures."
+    }
+  ],
+  "headline": "The site's core AI-native proof points \u2014 19,977 commits in 6 months with 69% paired to a coding agent across 124 repos \u2014 exist on-page but are invisible to llms.txt, so the exact claim answer engines would need to validate 'AI-native, agentic-led' positioning currently can't be cited."
+}

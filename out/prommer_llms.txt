@@ -1,0 +1,41 @@
+# Thomas Prommer
+
+> Technology executive (CTO/CIO) and AI strategy consultant, writing from practice on technology leadership and on hybrid endurance training — marathon, Ironman and HYROX.
+
+Two content pillars, both written first-hand rather than aggregated:
+
+- **Tech** — technology leadership, AI strategy, the emerging Chief Technology & AI Officer role, interim leadership, executive search, and compensation benchmarks.
+- **Training** — hybrid athlete training, with the deepest coverage on HYROX: what it is, how it compares to CrossFit, race preparation, and city-by-city training guidance.
+
+Content is published in English with substantial translated coverage in German, Spanish, French, Portuguese and Italian, plus partial coverage in Dutch, Finnish, Swedish, Polish, Indonesian, Danish and Czech. English is the source of truth; translated pages mirror it under a language prefix (`/de/`, `/es/`, …).
+
+## Start here
+
+- [Home](https://prommer.net/): Overview of both pillars.
+- [About](https://prommer.net/en/about/thomas-prommer/): Background, roles, and how the two pillars connect.
+- [Advisory](https://prommer.net/en/services/advisory/): Advisory and interim engagements.
+- [Ask Tom](https://prommer.net/en/ask-tom/): Direct questions.
+- [Newsletter](https://prommer.net/en/newsletter/): Ongoing writing.
+
+## Technology leadership
+
+- [Tech section](https://prommer.net/en/tech/): Index of all technology-leadership writing (~159 English pages).
+- Topics covered: Chief Technology & AI Officer role definition, AI consulting and what an AI strategy consultant actually does, interim technology leadership and rates, technology executive search, and salary benchmarks for CTO, CIO, data engineer, DevOps and software engineering roles.
+
+## Hybrid endurance training
+
+- [Training section](https://prommer.net/en/training/): Index of all training writing (~489 English pages).
+- Topics covered: HYROX explained, HYROX vs CrossFit, race-specific preparation, marathon and Ironman training, and city-level training guides.
+
+## Contact and admin
+
+- [Book onboarding](https://prommer.net/book-onboarding/)
+- [Press](https://prommer.net/en/press/)
+- [Sitemap](https://prommer.net/en/sitemap/)
+- [Privacy](https://prommer.net/en/privacy/) · [Terms](https://prommer.net/en/terms/)
+
+## Related properties
+
+- [CTAIO](https://ctaio.dev/): Weekly newsletter on the CTO + CIO + AI convergence.
+- [We The Flywheel](https://wetheflywheel.com/): Group company.
+- [Flywheel Motion](https://flywheelmotion.com/): Discoverability practice.

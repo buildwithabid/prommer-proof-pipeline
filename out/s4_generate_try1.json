@@ -1,0 +1,119 @@
+{
+  "llms_txt_patch": "## Proof of practice\n\n- 19,977 commits shipped in the past 6 months\n- 69% of commits paired with a coding agent\n- 124 repositories built and run\n- 20+ years of digital experience\n- 1000+ engineers led\n- $2B+ work-scope impact\n- 46% Fortune 50 client coverage\n- Marathon PB 3:20 at the Metropolis Marathon 2025\n- VO2Max Lab Tested 56 (Dec 2025)\n- 2025 running mileage >2.5k km",
+  "jsonld": {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thomas Prommer",
+    "jobTitle": "Founder",
+    "award": [
+      "HotTopics Global CIO 2026",
+      "Fast Company 2026 World Changing Idea for Flywheel Motion"
+    ],
+    "memberOf": {
+      "@type": "Organization",
+      "name": "ctaio.dev",
+      "description": "Community for the next-gen tech executive"
+    },
+    "founder": [
+      {
+        "@type": "Organization",
+        "name": "ctaio.dev"
+      },
+      {
+        "@type": "Organization",
+        "name": "We The Flywheel"
+      },
+      {
+        "@type": "Organization",
+        "name": "Flywheel Motion"
+      },
+      {
+        "@type": "Organization",
+        "name": "aistrategy.guide"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "CreativeWork",
+        "name": "Business Insider",
+        "description": "They didn't want their best contributions footnoted as 'cowritten by Claude'"
+      },
+      {
+        "@type": "NewsArticle",
+        "publisher": "USA Today",
+        "headline": "Thomas Prommer Named Global CIO 2026 by HotTopics"
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Fast Company",
+        "description": "Fast Company Names Flywheel Motion a 2026 World Changing Idea \u2014 Built on Three Years of Global Field Research"
+      }
+    ],
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Digital Experience",
+        "value": "20+ years"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Teams Led",
+        "value": "1000+ engineers"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Work Scope",
+        "value": "$2B+ impact"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Fortune 50 Clients",
+        "value": "46% coverage"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Commits (6 months)",
+        "value": "19,977"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Commits paired with a coding agent",
+        "value": "69%"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Repositories built and run",
+        "value": "124"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Marathon PB",
+        "value": "3:20 (Metropolis Marathon 2025)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "VO2Max Lab Tested",
+        "value": "56 (Dec 2025)"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "2025 Mileage",
+        "value": ">2.5k km"
+      }
+    ]
+  },
+  "booker_brief": {
+    "hook": "HotTopics named him Global CIO 2026, Fast Company named Flywheel Motion a 2026 World Changing Idea, and Business Insider quoted him on why contributors didn't want their work footnoted as 'cowritten by Claude.'",
+    "why_now": "Two major 2026 recognitions (HotTopics Global CIO 2026, Fast Company's 2026 World Changing Idea for Flywheel Motion) plus USA Today coverage have landed in the same window, alongside AI-native practice numbers most guests can't back up.",
+    "three_proof_points": [
+      "19,977 commits shipped in 6 months, with 69% paired with a coding agent, across 124 repositories built and run.",
+      "HotTopics named him Global CIO 2026 (also covered by USA Today); Fast Company named Flywheel Motion a 2026 World Changing Idea, built on three years of global field research.",
+      "Quoted in Business Insider: contributors didn't want their best contributions footnoted as 'cowritten by Claude.'"
+    ],
+    "suggested_questions": [
+      "What does it actually look like day-to-day to have 69% of your commits paired with a coding agent across 124 repositories?",
+      "What did three years of global field research turn up that led Fast Company to name Flywheel Motion a 2026 World Changing Idea?",
+      "What's the story behind your Business Insider quote about contributors not wanting work footnoted as 'cowritten by Claude'?"
+    ]
+  }
+}

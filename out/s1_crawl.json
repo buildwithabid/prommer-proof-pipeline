@@ -1,0 +1,172 @@
+{
+  "fetched": [
+    "prommer.net",
+    "wetheflywheel.com",
+    "prommer.net/llms.txt",
+    "swyx.io",
+    "simonwillison.net",
+    "danabra.mov"
+  ],
+  "site_text_chars": 15875,
+  "llms_txt_chars": 2533,
+  "ticker_weeks": [
+    {
+      "week": "Mar 22",
+      "repos": 29,
+      "commits": 292,
+      "ai_paired": 207
+    },
+    {
+      "week": "Mar 29",
+      "repos": 40,
+      "commits": 348,
+      "ai_paired": 215
+    },
+    {
+      "week": "Apr 5",
+      "repos": 30,
+      "commits": 483,
+      "ai_paired": 375
+    },
+    {
+      "week": "Apr 12",
+      "repos": 37,
+      "commits": 651,
+      "ai_paired": 451
+    },
+    {
+      "week": "Apr 19",
+      "repos": 30,
+      "commits": 368,
+      "ai_paired": 289
+    },
+    {
+      "week": "Apr 26",
+      "repos": 35,
+      "commits": 583,
+      "ai_paired": 270
+    },
+    {
+      "week": "May 3",
+      "repos": 49,
+      "commits": 537,
+      "ai_paired": 377
+    },
+    {
+      "week": "May 10",
+      "repos": 41,
+      "commits": 657,
+      "ai_paired": 490
+    },
+    {
+      "week": "May 17",
+      "repos": 47,
+      "commits": 554,
+      "ai_paired": 352
+    },
+    {
+      "week": "May 24",
+      "repos": 57,
+      "commits": 640,
+      "ai_paired": 492
+    },
+    {
+      "week": "May 31",
+      "repos": 57,
+      "commits": 895,
+      "ai_paired": 814
+    },
+    {
+      "week": "Jun 7",
+      "repos": 67,
+      "commits": 1382,
+      "ai_paired": 1136
+    },
+    {
+      "week": "Jun 14",
+      "repos": 74,
+      "commits": 1436,
+      "ai_paired": 1202
+    },
+    {
+      "week": "Jun 21",
+      "repos": 61,
+      "commits": 1343,
+      "ai_paired": 1079
+    },
+    {
+      "week": "Jun 28",
+      "repos": 57,
+      "commits": 995,
+      "ai_paired": 804
+    },
+    {
+      "week": "Jul 5",
+      "repos": 85,
+      "commits": 1105,
+      "ai_paired": 758
+    },
+    {
+      "week": "Jul 12",
+      "repos": 71,
+      "commits": 769,
+      "ai_paired": 629
+    },
+    {
+      "week": "Jul 19",
+      "repos": 47,
+      "commits": 414,
+      "ai_paired": 295
+    },
+    {
+      "week": "Jul 26",
+      "repos": 45,
+      "commits": 816,
+      "ai_paired": 554
+    },
+    {
+      "week": "Aug 2",
+      "repos": 39,
+      "commits": 506,
+      "ai_paired": 417
+    },
+    {
+      "week": "Aug 9",
+      "repos": 48,
+      "commits": 852,
+      "ai_paired": 363
+    },
+    {
+      "week": "Aug 16",
+      "repos": 61,
+      "commits": 1426,
+      "ai_paired": 783
+    },
+    {
+      "week": "Aug 23",
+      "repos": 57,
+      "commits": 937,
+      "ai_paired": 362
+    },
+    {
+      "week": "Aug 30",
+      "repos": 57,
+      "commits": 981,
+      "ai_paired": 393
+    },
+    {
+      "week": "Sep 6",
+      "repos": 41,
+      "commits": 786,
+      "ai_paired": 543
+    },
+    {
+      "week": "Sep 13",
+      "repos": 27,
+      "commits": 221,
+      "ai_paired": 173
+    }
+  ],
+  "corpus_chars": 23798,
+  "corpus_sha": "e6d0c0637420"
+}

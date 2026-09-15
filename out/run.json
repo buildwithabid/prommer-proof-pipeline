@@ -1,0 +1,703 @@
+{
+  "stages": [
+    {
+      "stage": "s1_crawl",
+      "kind": "deterministic",
+      "secs": 0.0,
+      "note": "26 ticker weeks, 23798 char corpus"
+    },
+    {
+      "stage": "s2_extract",
+      "kind": "agent",
+      "secs": 21.3,
+      "chars_in": 14742,
+      "chars_out": 4930
+    },
+    {
+      "stage": "s3_audit",
+      "kind": "agent",
+      "secs": 35.7,
+      "chars_in": 8645,
+      "chars_out": 4974
+    },
+    {
+      "stage": "s4_generate_try1",
+      "kind": "agent",
+      "secs": 80.3,
+      "chars_in": 10885,
+      "chars_out": 4018
+    },
+    {
+      "stage": "s5_validate",
+      "kind": "deterministic-gate",
+      "secs": 0.0,
+      "note": "25 checks, 0 ungrounded, gate=PASS"
+    }
+  ],
+  "started": "2026-09-15T06:11:35Z",
+  "attempts": 1,
+  "gate": "PASS",
+  "crawl": {
+    "fetched": [
+      "prommer.net",
+      "wetheflywheel.com",
+      "prommer.net/llms.txt",
+      "swyx.io",
+      "simonwillison.net",
+      "danabra.mov"
+    ],
+    "site_text_chars": 15875,
+    "llms_txt_chars": 2533,
+    "ticker_weeks": [
+      {
+        "week": "Mar 22",
+        "repos": 29,
+        "commits": 292,
+        "ai_paired": 207
+      },
+      {
+        "week": "Mar 29",
+        "repos": 40,
+        "commits": 348,
+        "ai_paired": 215
+      },
+      {
+        "week": "Apr 5",
+        "repos": 30,
+        "commits": 483,
+        "ai_paired": 375
+      },
+      {
+        "week": "Apr 12",
+        "repos": 37,
+        "commits": 651,
+        "ai_paired": 451
+      },
+      {
+        "week": "Apr 19",
+        "repos": 30,
+        "commits": 368,
+        "ai_paired": 289
+      },
+      {
+        "week": "Apr 26",
+        "repos": 35,
+        "commits": 583,
+        "ai_paired": 270
+      },
+      {
+        "week": "May 3",
+        "repos": 49,
+        "commits": 537,
+        "ai_paired": 377
+      },
+      {
+        "week": "May 10",
+        "repos": 41,
+        "commits": 657,
+        "ai_paired": 490
+      },
+      {
+        "week": "May 17",
+        "repos": 47,
+        "commits": 554,
+        "ai_paired": 352
+      },
+      {
+        "week": "May 24",
+        "repos": 57,
+        "commits": 640,
+        "ai_paired": 492
+      },
+      {
+        "week": "May 31",
+        "repos": 57,
+        "commits": 895,
+        "ai_paired": 814
+      },
+      {
+        "week": "Jun 7",
+        "repos": 67,
+        "commits": 1382,
+        "ai_paired": 1136
+      },
+      {
+        "week": "Jun 14",
+        "repos": 74,
+        "commits": 1436,
+        "ai_paired": 1202
+      },
+      {
+        "week": "Jun 21",
+        "repos": 61,
+        "commits": 1343,
+        "ai_paired": 1079
+      },
+      {
+        "week": "Jun 28",
+        "repos": 57,
+        "commits": 995,
+        "ai_paired": 804
+      },
+      {
+        "week": "Jul 5",
+        "repos": 85,
+        "commits": 1105,
+        "ai_paired": 758
+      },
+      {
+        "week": "Jul 12",
+        "repos": 71,
+        "commits": 769,
+        "ai_paired": 629
+      },
+      {
+        "week": "Jul 19",
+        "repos": 47,
+        "commits": 414,
+        "ai_paired": 295
+      },
+      {
+        "week": "Jul 26",
+        "repos": 45,
+        "commits": 816,
+        "ai_paired": 554
+      },
+      {
+        "week": "Aug 2",
+        "repos": 39,
+        "commits": 506,
+        "ai_paired": 417
+      },
+      {
+        "week": "Aug 9",
+        "repos": 48,
+        "commits": 852,
+        "ai_paired": 363
+      },
+      {
+        "week": "Aug 16",
+        "repos": 61,
+        "commits": 1426,
+        "ai_paired": 783
+      },
+      {
+        "week": "Aug 23",
+        "repos": 57,
+        "commits": 937,
+        "ai_paired": 362
+      },
+      {
+        "week": "Aug 30",
+        "repos": 57,
+        "commits": 981,
+        "ai_paired": 393
+      },
+      {
+        "week": "Sep 6",
+        "repos": 41,
+        "commits": 786,
+        "ai_paired": 543
+      },
+      {
+        "week": "Sep 13",
+        "repos": 27,
+        "commits": 221,
+        "ai_paired": 173
+      }
+    ],
+    "corpus_chars": 23798,
+    "corpus_sha": "e6d0c0637420"
+  },
+  "ledger": {
+    "proof_ledger": [
+      {
+        "claim": "HotTopics named Thomas Prommer Global CIO 2026.",
+        "category": "press",
+        "evidence": "HotTopics names Thomas Prommer Global CIO 2026"
+      },
+      {
+        "claim": "Fast Company named Flywheel Motion a 2026 World Changing Idea.",
+        "category": "press",
+        "evidence": "Fast Company names Flywheel Motion a 2026 World Changing Idea"
+      },
+      {
+        "claim": "Thomas Prommer was quoted in Business Insider saying contributors didn't want their work footnoted as cowritten by Claude.",
+        "category": "press",
+        "evidence": "\"They didn\u2019t want their best contributions footnoted as \u2018cowritten by Claude\u2019\""
+      },
+      {
+        "claim": "He has 20+ years of digital experience.",
+        "category": "scale",
+        "evidence": "Digital Experience 20+ years"
+      },
+      {
+        "claim": "He has led 1000+ engineers.",
+        "category": "scale",
+        "evidence": "Teams Led 1000+ engineers"
+      },
+      {
+        "claim": "His work scope has $2B+ impact.",
+        "category": "scale",
+        "evidence": "Work Scope $2B+ impact"
+      },
+      {
+        "claim": "He has Fortune 50 clients with 46% coverage.",
+        "category": "scale",
+        "evidence": "Fortune 50 Clients 46% coverage"
+      },
+      {
+        "claim": "He is the Founder at ctaio.dev, a community for next-gen technology leadership.",
+        "category": "positioning",
+        "evidence": "Founder at ctaio.dev Community for next-gen technology leadership"
+      },
+      {
+        "claim": "He shipped 19,977 commits over 6 months.",
+        "category": "scale",
+        "evidence": "19,977 commits"
+      },
+      {
+        "claim": "69% of his commits are paired with a coding agent.",
+        "category": "practice",
+        "evidence": "69% of commits paired with a coding agent"
+      },
+      {
+        "claim": "He builds and runs 124 repositories.",
+        "category": "scale",
+        "evidence": "out of 124 I build and run"
+      },
+      {
+        "claim": "His VO2Max Lab Tested result is 56 as of Dec 2025.",
+        "category": "scale",
+        "evidence": "VO2Max Lab Tested 56 Dec 2025"
+      },
+      {
+        "claim": "His 2025 running mileage was more than 2.5k km.",
+        "category": "scale",
+        "evidence": "2025 Mileage >2.5k km running"
+      },
+      {
+        "claim": "His Marathon PB is 3:20 at the Metropolis Marathon 2025.",
+        "category": "scale",
+        "evidence": "Marathon PB 3:20 Metropolis Marathon 2025"
+      },
+      {
+        "claim": "USA Today reported he was named Global CIO 2026 by HotTopics.",
+        "category": "press",
+        "evidence": "USA Today \u00b7 Jun 2026 Named Global CIO 2026 by HotTopics"
+      },
+      {
+        "claim": "Fast Company's World Changing Idea recognition for Flywheel Motion was built on three years of global field research.",
+        "category": "press",
+        "evidence": "Fast Company Names Flywheel Motion a 2026 World Changing Idea \u2014 Built on Three Years of Global Field Research"
+      }
+    ],
+    "properties": [
+      {
+        "name": "We The Flywheel",
+        "url": "",
+        "role": "AI-native, agentic-led digital studio"
+      },
+      {
+        "name": "Flywheel Motion",
+        "url": "",
+        "role": "Mission-led brand building"
+      },
+      {
+        "name": "ctaio.dev",
+        "url": "",
+        "role": "Community for the next-gen tech executive"
+      },
+      {
+        "name": "aistrategy.guide",
+        "url": "",
+        "role": "Enterprise AI strategy"
+      }
+    ],
+    "press": [
+      {
+        "outlet": "Business Insider",
+        "claim": "They didn\u2019t want their best contributions footnoted as \u2018cowritten by Claude\u2019"
+      },
+      {
+        "outlet": "USA Today",
+        "claim": "Named Global CIO 2026 by HotTopics"
+      },
+      {
+        "outlet": "sportschau.de",
+        "claim": "\"Datenlage zu d\u00fcnn\": Abnehmspritze im Sport \u2013 ist das schon Doping?"
+      },
+      {
+        "outlet": "vcmagazine.com",
+        "claim": "Beyond Passwords: How AI-Era Identity Platforms Are Redefining Trust Online"
+      },
+      {
+        "outlet": "medium.com",
+        "claim": "Your Boss Told You to Use AI. Now the AI Is Getting the Credit. You're Getting the Blame."
+      },
+      {
+        "outlet": "businessinsider.com",
+        "claim": "Bosses credit AI instead of employees, delaying promotions, raises"
+      },
+      {
+        "outlet": "finchannel.com",
+        "claim": "AI and Crypto Convergence: What Happens After the Speculation Fades"
+      },
+      {
+        "outlet": "cio.inc",
+        "claim": "Why Enterprises Need a New Playbook for AI Value"
+      },
+      {
+        "outlet": "usatoday.com",
+        "claim": "Thomas Prommer Named Global CIO 2026 by HotTopics"
+      },
+      {
+        "outlet": "okoone.com",
+        "claim": "Why most companies still think too small about AI"
+      },
+      {
+        "outlet": "prommer.net",
+        "claim": "HotTopics Names Thomas Prommer Global CIO 2026"
+      },
+      {
+        "outlet": "apnews.com",
+        "claim": "Fast Company Names Flywheel Motion a 2026 World Changing Idea \u2014 Built on Three Years of Global Field Research"
+      },
+      {
+        "outlet": "prweb.com",
+        "claim": "Edges of Earth Named Honoree in Fast Company's 2026 World Changing Ideas Awards"
+      },
+      {
+        "outlet": "cio.com",
+        "claim": "State of the CIO, 2026: CIOs set the course for AI ROI"
+      },
+      {
+        "outlet": "ctocraft.com",
+        "claim": "AI is the New OS"
+      },
+      {
+        "outlet": "hyground.ai",
+        "claim": "Partner Ecosystem Update May 2026 \u2014 CTO purchasing guide for AI-SRE tools"
+      },
+      {
+        "outlet": "noah-news.com",
+        "claim": "Most companies remain at early AI maturity stages"
+      },
+      {
+        "outlet": "spiceworks.com",
+        "claim": "How AI is Reshaping Data Center Careers"
+      },
+      {
+        "outlet": "cio.com",
+        "claim": "Las compa\u00f1\u00edas siguen buscando mejoras incrementales, no transformadoras, con la IA"
+      },
+      {
+        "outlet": "cio.com",
+        "claim": "Enterprises still chase incremental, not transformational, AI gains"
+      },
+      {
+        "outlet": "collegerecruiter.com",
+        "claim": "From prompt engineering to soft skills: The new 'skills-first' baseline for EU entry-level roles"
+      },
+      {
+        "outlet": "moneyinfocus.news",
+        "claim": "OpenAI, Anthropic Dispute Signals Shift in AI Investment Priorities"
+      }
+    ]
+  },
+  "audit": {
+    "findings": [
+      {
+        "gap": "llms.txt links to a bare /en/press/ page but contains zero actual press claims \u2014 no mention of HotTopics naming him Global CIO 2026, Fast Company naming Flywheel Motion a World Changing Idea, the Business Insider quote, or USA Today's coverage. All of this lives only in on-page (likely client-rendered) proof blocks, not in the crawlable index.",
+        "why_it_costs_inbound": "Press/podcast bookers are named as a primary buyer and they query LLMs with prompts like 'who has recently been named a CIO of the year' or 'guests quoted in Business Insider on AI and authorship' \u2014 with no citable text, an answer engine cites a competitor with a thinner but crawlable accolade list instead.",
+        "severity": "high",
+        "fix": "Add a dated 'Recognition & Press' section to llms.txt listing each accolade/outlet/claim verbatim (HotTopics Global CIO 2026, Fast Company World Changing Idea 2026, Business Insider quote, USA Today feature) with direct links."
+      },
+      {
+        "gap": "The specific AI-native practice metrics that substantiate the 'agentic-led digital studio' claim \u2014 19,977 commits in 6 months, 69% of commits paired with a coding agent, 124 repositories run \u2014 appear nowhere in llms.txt.",
+        "why_it_costs_inbound": "This is the single most differentiating proof-of-practice claim on the site and the exact thing a founder vetting an AI-native counterparty would ask an LLM to verify ('does this person actually build with agents or just talk about it?'). Without it in crawlable text, the positioning claim in the llms.txt overview line is unsubstantiated to any model reading it.",
+        "severity": "high",
+        "fix": "Add a 'Proof of practice' section with the commit volume, agent-pairing percentage, and repo count, refreshed on a stated cadence so the numbers don't go stale."
+      },
+      {
+        "gap": "Scale/authority credentials \u2014 20+ years digital experience, 1000+ engineers led, $2B+ work-scope impact, 46% Fortune 50 client coverage \u2014 are on-site but absent from llms.txt.",
+        "why_it_costs_inbound": "These are the baseline qualifying stats a founder/operator uses to decide whether to even consider an advisory engagement; without them an LLM answering 'has this consultant worked at enterprise scale' has nothing to cite and will default to generic bio language or a competitor's stated numbers.",
+        "severity": "high",
+        "fix": "Add these four figures to the About or a new 'Track record' section in llms.txt, matched to the same wording used on-site for consistency."
+      },
+      {
+        "gap": "aistrategy.guide ('Enterprise AI strategy') is listed in the site's own properties data but missing entirely from the 'Related properties' section of llms.txt, which only lists CTAIO, We The Flywheel, and Flywheel Motion.",
+        "why_it_costs_inbound": "A fourth property focused specifically on enterprise AI strategy is exactly the surface an LLM would want to cite when answering 'does this person have resources on enterprise AI strategy' \u2014 right now that entire property is invisible to answer engines crawling from prommer.net.",
+        "severity": "medium",
+        "fix": "Add aistrategy.guide to the Related properties list with its role description, matching the format of the other three entries."
+      },
+      {
+        "gap": "llms.txt describes ctaio.dev as 'Weekly newsletter on the CTO + CIO + AI convergence' while the live site's own proof ledger describes it as 'Founder at ctaio.dev \u2014 Community for next-gen technology leadership.' The positioning has shifted from newsletter to community/founder framing but llms.txt wasn't updated.",
+        "why_it_costs_inbound": "Inconsistent self-description across crawlable surfaces makes an LLM either pick the stale framing or hedge with uncertain language, weakening the specific 'Founder' credential that supports authority-based buyer decisions.",
+        "severity": "medium",
+        "fix": "Update the ctaio.dev entry in Related properties to match current site language, including the 'Founder' role."
+      },
+      {
+        "gap": "The Training pillar description in llms.txt is purely topical (HYROX, marathon, Ironman) with no concrete performance proof points, while the site carries specific, verifiable numbers (Marathon PB 3:20 at Metropolis Marathon 2025, VO2Max 56 lab-tested Dec 2025, >2.5k km 2025 mileage) that establish first-hand practitioner credibility.",
+        "why_it_costs_inbound": "The llms.txt overview explicitly claims content is 'written first-hand rather than aggregated' for training too \u2014 without citable performance numbers, an LLM can't distinguish this from any other training blogger, undercutting the credibility claim for the pillar that has ~489 pages of content riding on it.",
+        "severity": "low",
+        "fix": "Add a short 'Athlete credentials' line to the Training section with the marathon PB, VO2Max, and mileage figures."
+      }
+    ],
+    "headline": "The site's core AI-native proof points \u2014 19,977 commits in 6 months with 69% paired to a coding agent across 124 repos \u2014 exist on-page but are invisible to llms.txt, so the exact claim answer engines would need to validate 'AI-native, agentic-led' positioning currently can't be cited."
+  },
+  "generated": {
+    "llms_txt_patch": "## Proof of practice\n\n- 19,977 commits shipped in the past 6 months\n- 69% of commits paired with a coding agent\n- 124 repositories built and run\n- 20+ years of digital experience\n- 1000+ engineers led\n- $2B+ work-scope impact\n- 46% Fortune 50 client coverage\n- Marathon PB 3:20 at the Metropolis Marathon 2025\n- VO2Max Lab Tested 56 (Dec 2025)\n- 2025 running mileage >2.5k km",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Thomas Prommer",
+      "jobTitle": "Founder",
+      "award": [
+        "HotTopics Global CIO 2026",
+        "Fast Company 2026 World Changing Idea for Flywheel Motion"
+      ],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "ctaio.dev",
+        "description": "Community for the next-gen tech executive"
+      },
+      "founder": [
+        {
+          "@type": "Organization",
+          "name": "ctaio.dev"
+        },
+        {
+          "@type": "Organization",
+          "name": "We The Flywheel"
+        },
+        {
+          "@type": "Organization",
+          "name": "Flywheel Motion"
+        },
+        {
+          "@type": "Organization",
+          "name": "aistrategy.guide"
+        }
+      ],
+      "mentions": [
+        {
+          "@type": "CreativeWork",
+          "name": "Business Insider",
+          "description": "They didn't want their best contributions footnoted as 'cowritten by Claude'"
+        },
+        {
+          "@type": "NewsArticle",
+          "publisher": "USA Today",
+          "headline": "Thomas Prommer Named Global CIO 2026 by HotTopics"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Fast Company",
+          "description": "Fast Company Names Flywheel Motion a 2026 World Changing Idea \u2014 Built on Three Years of Global Field Research"
+        }
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Digital Experience",
+          "value": "20+ years"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Teams Led",
+          "value": "1000+ engineers"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Work Scope",
+          "value": "$2B+ impact"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Fortune 50 Clients",
+          "value": "46% coverage"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Commits (6 months)",
+          "value": "19,977"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Commits paired with a coding agent",
+          "value": "69%"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Repositories built and run",
+          "value": "124"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Marathon PB",
+          "value": "3:20 (Metropolis Marathon 2025)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "VO2Max Lab Tested",
+          "value": "56 (Dec 2025)"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "2025 Mileage",
+          "value": ">2.5k km"
+        }
+      ]
+    },
+    "booker_brief": {
+      "hook": "HotTopics named him Global CIO 2026, Fast Company named Flywheel Motion a 2026 World Changing Idea, and Business Insider quoted him on why contributors didn't want their work footnoted as 'cowritten by Claude.'",
+      "why_now": "Two major 2026 recognitions (HotTopics Global CIO 2026, Fast Company's 2026 World Changing Idea for Flywheel Motion) plus USA Today coverage have landed in the same window, alongside AI-native practice numbers most guests can't back up.",
+      "three_proof_points": [
+        "19,977 commits shipped in 6 months, with 69% paired with a coding agent, across 124 repositories built and run.",
+        "HotTopics named him Global CIO 2026 (also covered by USA Today); Fast Company named Flywheel Motion a 2026 World Changing Idea, built on three years of global field research.",
+        "Quoted in Business Insider: contributors didn't want their best contributions footnoted as 'cowritten by Claude.'"
+      ],
+      "suggested_questions": [
+        "What does it actually look like day-to-day to have 69% of your commits paired with a coding agent across 124 repositories?",
+        "What did three years of global field research turn up that led Fast Company to name Flywheel Motion a 2026 World Changing Idea?",
+        "What's the story behind your Business Insider quote about contributors not wanting work footnoted as 'cowritten by Claude'?"
+      ]
+    }
+  },
+  "validation": {
+    "total_checks": 25,
+    "failed": 0,
+    "passed": 25,
+    "gate": "PASS",
+    "ungrounded": [],
+    "checks": [
+      {
+        "type": "number",
+        "token": "1000",
+        "grounded": true
+      },
+      {
+        "type": "number",
+        "token": "124",
+        "grounded": true
+      },
+      {
+        "type": "number",
+        "token": "19,977",
+        "grounded": true
+      },
+      {
+        "type": "number",
+        "token": "20",
+        "grounded": true
+      },
+      {
+        "type": "number",
+        "token": "2025",
+        "grounded": true
+      },
+      {
+        "type": "number",
+        "token": "2026",
+        "grounded": true
+      },
+      {
+        "type": "number",
+        "token": "46",
+        "grounded": true
+      },
+      {
+        "type": "number",
+        "token": "50",
+        "grounded": true
+      },
+      {
+        "type": "number",
+        "token": "56",
+        "grounded": true
+      },
+      {
+        "type": "number",
+        "token": "69",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Business Insider",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Digital Experience",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Fast Company",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Fast Company Names Flywheel Motion",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Flywheel Motion",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "HotTopics Global CIO",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Marathon PB",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Metropolis Marathon",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Thomas Prommer",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Thomas Prommer Named Global CIO",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "Three Years",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "USA Today",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "VO2Max Lab Tested",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "We The Flywheel",
+        "grounded": true
+      },
+      {
+        "type": "entity",
+        "token": "World Changing Idea",
+        "grounded": true
+      }
+    ]
+  },
+  "finished": "2026-09-15T06:13:52Z"
+}
